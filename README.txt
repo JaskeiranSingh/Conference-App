@@ -1,4 +1,6 @@
 
+Conference App that displays schedule for a fake Conference completed as an assignment at Northumbria university using PHP and AngularJS. Part 1 is the back-end of the application that supplies the data required for the user interface within part 2 of the application.
+
 JASKEIRAN SINGH DEOL - W16007099
 jaskeiran.deol@northumbria.ac.uk
 
