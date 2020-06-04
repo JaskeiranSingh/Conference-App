@@ -1,0 +1,50 @@
+<!--Start of slot timetable section of App-->
+<section>
+   <!--Header for section-->
+   <h1 class='display-4'>Schedule</h1>
+   <p class='lead'>Select a time slot to view its sessions</p>
+   <!--Start of slot table for Monday slots-->
+    <h3>Monday</h3>
+   <table class='table table-hover table-dark'>
+      <!--Returns data from controller-->
+      <tr data-ng-repeat="mon in monSlots"
+         data-ng-click="selectMon($event, mon)"
+         data-ng-class="{'selected':selectedMon.slotID===mon.slotID}"
+         style="cursor: pointer;">
+         <td>{{mon.time}}</td>
+      </tr>
+   </table>
+   <!--Start of slot table for Tuesday slots-->
+    <h3>Tuesday</h3>
+   <table class='table table-hover table-dark'>
+      <!--Returns data from controller-->
+      <tr data-ng-repeat="tues in tueSlots"
+         data-ng-click="selectTues($event, tues)"
+         data-ng-class="{'selected':selectedTues.slotID===tues.slotID}"
+         style="cursor: pointer;">
+         <td>{{tues.time}}</td>
+      </tr>
+   </table>
+   <!--Start of slot table for Wednesday slots-->
+    <h3>Wednesday</h3>
+   <table class='table table-hover table-dark'>
+      <!--Returns data from controller-->
+      <tr data-ng-repeat="wed in wedSlots"
+         data-ng-click="selectWed($event, wed)"
+         data-ng-class="{'selected':selectedWed.slotID===wed.slotID}"
+         style="cursor: pointer;">
+         <td>{{wed.time}}</td>
+      </tr>
+   </table>
+   <!--Start of slot table for Thursday slots-->
+    <h3>Thursday</h3>
+   <table class='table table-hover table-dark'>
+      <!--Returns data from controller-->
+      <tr data-ng-repeat="thurs in thurSlots"
+         data-ng-click="selectThurs($event, thurs)"
+         data-ng-class="{'selected':selectedThurs.slotID===thurs.slotID}"
+         style="cursor: pointer;">
+         <td>{{thurs.time}}</td>
+      </tr>
+   </table>
+</section>

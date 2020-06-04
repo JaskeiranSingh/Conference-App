@@ -1,0 +1,27 @@
+<!--Start of Presentation section of App-->
+<section>
+   <!--Title of section-->
+   <h1 class="display-4">Presentations</h1>
+      <!--Div container for form-->
+      <div class="col-sm-4">
+         <!--Form elements-->
+         <button type="submit" ng-click="allPresentations()" class="btn btn-outline-secondary" style="margin:10px;" form-control form-control-sm>All Presentations</button>
+         <select class="form-control" style="margin-top:10px;"  ng-model="categorySelect" ng-options="category as category.description for category in categories" ng-change="categorySelected()">
+            <option value="">Select Category</option>
+         </select> 
+         <input type="text" class="form-control" style="margin-top:10px;" ng-model="query" placeholder="Search Presentations"/>
+      </div>
+      <!--Displays number of Presentations in list-->
+      <p class="lead" style="margin:10px;" >Showing {{filtered.length}} Presentations</p>
+      <!--Displays Presentations list-->
+      <div class = "presentation" ng-repeat="presentation in presentations | filter:query as filtered">
+         <h4 class = "presTitle">{{presentation.title}}</h4>
+         <h4>Abstract</h4>
+         <p>{{presentation.abstract}}</p>
+         <h4>Authors</h4>
+         <p>{{presentation.author}}</p>
+         <p>{{presentation.affiliation}}</p>
+         <h4>Keywords</h4> 
+         <p>{{presentation.keywords}}</p>
+      </div>
+</section>

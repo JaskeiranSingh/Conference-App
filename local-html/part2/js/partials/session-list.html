@@ -1,0 +1,27 @@
+<!--Start of session view section of App-->
+<section>
+    <!--Shows number of sessions for selected slot-->
+	<h4>There are {{sessionCount}} sessions in this slot</h4>
+    <p class="lead">Select a session to view its activities</p>
+    <!--Start of session table-->
+    <table class="table table-hover ">
+        <tr>
+            <th scope="col">TITLE</th>
+            <th scope="col">DESCRIPTION</th>
+            <th scope="col">CHAIR</th>
+            <th scope="col">ROOM</th>
+        </tr>
+        <tbody>
+        <!--Returns data from controller-->
+        <tr data-ng-repeat="session in sessions"
+            data-ng-click="selectSession($event, session)"
+            data-ng-class="{'selected':selectedSession.sessID===session.sessID}"
+            style="cursor: pointer;">
+            <td>{{session.Session_Title}}</td>
+            <td>{{session.description}}</td>
+            <td>{{session.chair}}</td>
+            <td>{{session.room}}</td>
+        </tr>
+        </tbody>
+    </table>
+</section>

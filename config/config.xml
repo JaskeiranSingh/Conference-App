@@ -1,0 +1,7 @@
+<config>
+   <title>Conference</title>
+   <username>unn_1234</username>
+   <password>password</password>
+   <key>w16007099</key>
+   <dbname>sqlite:../../../db/chi2019.sqlite</dbname>
+</config>

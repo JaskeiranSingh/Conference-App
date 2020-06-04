@@ -1,0 +1,22 @@
+<!--Start of activity view section of App-->
+<section>
+    <!--Shows number of activities for selected session-->
+	<h4>There are {{activityCount}} activities in this session</h4>
+    <p class="lead">Select a paper to view all authors</p>
+    <!--Start of acitivities table-->
+    <table class="table table-hover">
+        <tr>
+            <th scope="col">TITLE</th>
+            <th scope="col">ABSTRACT</th>
+        </tr>
+        <!--Returns data from controller-->
+        <tr 
+            data-ng-repeat="activity in activities"
+            data-ng-click="selectActivity($event, activity)"
+            data-ng-class="{'selected':selectedActivity.actID===activity.actID}"
+            style="cursor: pointer;">
+            <td>{{activity.Activity_Title}}</td>
+            <td>{{activity.abstract}}</td>
+        </tr>
+    </table>
+</section>

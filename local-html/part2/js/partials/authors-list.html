@@ -1,0 +1,17 @@
+<!--Start of author view section of App-->
+<section> 
+    <!--Shows number of authors for selected activity-->
+	<h4>There are {{authorsCount}} authors for this activity</h4>
+     <!--Start of Authors table-->
+    <table class="table table-hover">
+        <tr>
+            <th scope="col">AUTHOR</th>
+            <th scope="col">INSTITUTION</th>
+        </tr>
+         <!--Returns data from controller-->
+        <tr data-ng-repeat="author in authors">
+            <td>{{author.author}}</td>
+            <td>{{author.affiliation}}</td>
+        </tr>
+    </table>
+</section>

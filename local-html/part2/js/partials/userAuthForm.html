@@ -1,0 +1,32 @@
+<!--Start of userAuthForm section of App-->
+<section>
+   <div id="userAuth">
+      <p class='lead'>Login as an admin to edit a session's chair</p>
+      <!--Login form-->
+      <div id='loginForm' data-ng-controller="userAuthController">
+         <div class="form-inline">
+            <form ng-submit="login(user)" ng-hide="loggedIn">
+               <input name="username" class="form-control form-control-sm" form-control form-control-sm ng-model="user.name" placeholder="Enter Username" required/>
+               <input type="password" name="password" class="form-control form-control-sm" form-control form-control-sm ng-model="user.password" placeholder="Enter Password" required/>
+               <button type="submit" class="btn btn-secondary btn-sm" form-control form-control-sm>Login</button>
+            </form>
+            <div id='sessionForm' ng-show="sessionForm">
+               <form ng-submit="sessionEdit(session)">
+                  <input name="sessions" class="form-control form-control-sm" form-control form-control-sm ng-model="session.title" placeholder="Enter Session title" required/>
+                  <input name="chair" class="form-control form-control-sm" form-control form-control-sm ng-model="session.chair" placeholder="Enter Chair" required/>
+                  <button type="submit" class="btn btn-secondary btn-sm" form-control form-control-sm>Submit</button>
+                  <!--Login Status display-->
+                  <p class = 'lead' style='color:grey;'>{{Fstatus}}</p>
+               </form>
+            </div>
+         </div>
+         <!--Login Status display-->
+         <p class = 'lead' style ='color:grey;'>{{status}}</p>
+         <div id='logOut' ng-show="loggedIn">
+            <form ng-submit="logout()">
+               <button type="submit" class="btn btn-outline-dark btn-sm" form-control form-control-sm>Logout</button>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>
